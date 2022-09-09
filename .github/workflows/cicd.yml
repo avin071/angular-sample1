@@ -1,0 +1,17 @@
+name: Angularjs CI/CD
+
+on:
+  push:
+    branches:
+      - 'feature/angular'
+
+jobs:
+  build:
+    name: Build 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: npm install and npm run build
+        run: |
+          npm i
+          npm run build:prod
