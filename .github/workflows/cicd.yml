@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: ng-easy/npm-install@v2
       - name: npm install and npm run build
         run: |
-          npm i
+          npm install
           ng build
